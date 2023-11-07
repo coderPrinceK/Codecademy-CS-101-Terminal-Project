@@ -6,3 +6,6 @@ Project Objectives:
   Use Git version control
   Use the command line and file navigation
   Write a technical blog post on the project
+
+
+  The Game I decided to recreate was Yahtzee. 
