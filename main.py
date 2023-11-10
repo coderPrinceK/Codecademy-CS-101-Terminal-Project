@@ -14,3 +14,9 @@ die_six = random.randint(1,6)
 
 dice = [die_one, die_two, die_three, die_four, die_five, die_six]
 print(dice)
+
+def rerole_individual():
+    return random.randint(1,6)
+
+die_one = rerole_individual()
+print(die_one)
