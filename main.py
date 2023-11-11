@@ -12,7 +12,6 @@ die_four = random.randint(1,6)
 die_five = random.randint(1,6)
 die_six = random.randint(1,6)
 dice = [die_one, die_two, die_three, die_four, die_five, die_six]
-print(dice)
 
 
 def rerole_individual(die_number):
@@ -28,12 +27,22 @@ def rerole_all():
     dice[5] = random.randint(1,6)
 
 
-turns = list(range(1,14))
+#turns = list(range(1,14)) for when the game is ready the other turns is for testing
+turns = [1]
+Y_N_choices = ["Yes", "No"]
+
 print("Welcome to solo Yahtzee.")
 for i in turns:
     print("Here are the dice on your first role")
     rerole_all()
     print(dice)
     first_choice = input("Would you like a chance to roll again? Yes or No")
+    while first_choice not in Y_N_choices:
+        first_choice = input("please type Yes or No.")
+    
     if first_choice == "Yes":
-        pass
+        print("Yes Works")
+    
+    
+    else:
+        print("No Works")    
