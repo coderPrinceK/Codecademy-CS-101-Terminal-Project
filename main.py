@@ -29,8 +29,11 @@ def rerole_all():
 
 
 turns = list(range(1,14))
+print("Welcome to solo Yahtzee.")
 for i in turns:
-    pass
-
-rerole_all()
-print(dice)
+    print("Here are the dice on your first role")
+    rerole_all()
+    print(dice)
+    first_choice = input("Would you like a chance to roll again? Yes or No")
+    if first_choice == "Yes":
+        pass
