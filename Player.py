@@ -19,20 +19,21 @@ class Player():
         self.chance_score = chance_score
 
     
-    def print_score_sheet():
-        print("Player: name".format(name=Player.name))
+    def print_score_sheet(self):
+        print("Player: {NAME}".format(NAME=self.name))
         print("__________")
-        print("Ones: "+Player.ones_score)
-        print("Twos: "+Player.twos_score)
-        print("Threes: "+Player.threes_score)
-        print("Fours: "+Player.fours_score)
-        print("Fives: "+Player.fives_score)
-        print("Sixs: "+Player.sixs_score)
+        print("Ones: {ONES}".format(ONES=self.ones_score))
+        print("Twos: {TWOS}".format(TWOS=self.twos_score))
+        print("Threes: {THREES}".format(THREES=self.threes_score))
+        print("Fours: {FOURS}".format(FOURS=self.fours_score))
+        print("Fives: {FIVES}".format(FIVES=self.fives_score))
+        print("Sixs: {SIXS}".format(SIXS=self.sixs_score))
         print("__________")
-        print("3 of a kind: "+Player.three_kind_score)
-        print("4 of a kind: "+Player.four_kind_score)
-        print("Full House: "+Player.full_house_score)
-        print("Sm. Straight: "+Player.sm_straight_score)
-        print("Lg. Straight: "+Player.lg_straight_score)
-        print("Yahtzee: "+Player.yahtzee_score)
-        print("Chance: "+Player.chance_score)
+        print("3 of a kind: {TKIND}".format(TKIND=self.three_kind_score))
+        print("4 of a kind: {FKIND}".format(FKIND=self.four_kind_score))
+        #replace theses so the match the ones above
+        print("Full House: "+self.full_house_score)
+        print("Sm. Straight: "+self.sm_straight_score)
+        print("Lg. Straight: "+self.lg_straight_score)
+        print("Yahtzee: "+self.yahtzee_score)
+        print("Chance: "+self.chance_score)
