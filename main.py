@@ -19,10 +19,18 @@ def rerole_individual(die_number):
     dice[die_number] = random.randint(1,6)
 
 
+def rerole_all():
+    dice[0] = random.randint(1,6)
+    dice[1] = random.randint(1,6)
+    dice[2] = random.randint(1,6)
+    dice[3] = random.randint(1,6)
+    dice[4] = random.randint(1,6)
+    dice[5] = random.randint(1,6)
+
+
 turns = list(range(1,14))
 for i in turns:
     pass
 
-rerole_individual(0)
-print(dice[0])
+rerole_all()
 print(dice)
