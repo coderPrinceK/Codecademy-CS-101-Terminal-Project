@@ -15,7 +15,9 @@ die_six = random.randint(1,6)
 
 
 
+def rerole_individual():
+    return random.randint(1,6)
 
 turns = list(range(1,14))
 for i in turns:
-    pass
+    print("works")
