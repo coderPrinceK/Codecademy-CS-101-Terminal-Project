@@ -17,3 +17,22 @@ class Player():
         self.lg_straight_score = lg_straight_score
         self.yahtzee_score = yahtzee_score
         self.chance_score = chance_score
+
+    
+    def print_score_sheet():
+        print("Player: name".format(name=Player.name))
+        print("__________")
+        print("Ones: "+Player.ones_score)
+        print("Twos: "+Player.twos_score)
+        print("Threes: "+Player.threes_score)
+        print("Fours: "+Player.fours_score)
+        print("Fives: "+Player.fives_score)
+        print("Sixs: "+Player.sixs_score)
+        print("__________")
+        print("3 of a kind: "+Player.three_kind_score)
+        print("4 of a kind: "+Player.four_kind_score)
+        print("Full House: "+Player.full_house_score)
+        print("Sm. Straight: "+Player.sm_straight_score)
+        print("Lg. Straight: "+Player.lg_straight_score)
+        print("Yahtzee: "+Player.yahtzee_score)
+        print("Chance: "+Player.chance_score)
