@@ -88,4 +88,17 @@ class Player():
             self.four_kind_score = count
         else:
             self.four_kind_score = 0
-   
+
+    def full_house_scoring(self, dice_list, three_num, two_num):
+        three_count = 0 
+        two_count = 0
+        for die in dice_list:
+            if die == three_num:
+                three_count += 1
+            elif die == two_num:
+                two_count += 1
+        
+        if three_count+two_count == 5:
+            self.full_house_score = 25
+        else:
+            self.full_house_score = 0
