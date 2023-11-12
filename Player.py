@@ -125,3 +125,22 @@ class Player():
             self.sm_straight_score = 0
         
     
+    def LG_straight_scoring(self, dice_list):
+        dice_list.sort()
+        sorted_list =[]
+        for die in dice_list:
+            if die not in sorted_list:
+                sorted_list.append(die)
+        
+        index_check = 5
+        index_count = 0
+        for die in sorted_list:
+            index_count += 1
+        
+        if index_count >= index_check:
+            if sorted_list[0]+1 == sorted_list[1] and sorted_list[1]+1 == sorted_list[2] and sorted_list[2]+1 == sorted_list[3] and sorted_list[3]+1 == sorted_list[4]:
+                self.lg_straight_score = 40
+            else:
+                self.lg_straight_score = 0
+        else:
+            self.lg_straight_score = 0
