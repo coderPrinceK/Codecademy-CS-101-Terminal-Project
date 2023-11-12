@@ -111,6 +111,17 @@ class Player():
             if die not in sorted_list:
                 sorted_list.append(die)
         
-        #fix  index error
-        test =  sorted_list[0]+1 == sorted_list[1] and sorted_list[1]+1 == sorted_list[2] and sorted_list[2]+1 == sorted_list[3]
-        print(test)
+        index_check = 4
+        index_count = 0
+        for die in sorted_list:
+            index_count += 1
+        
+        if index_count >= index_check:
+            if sorted_list[0]+1 == sorted_list[1] and sorted_list[1]+1 == sorted_list[2] and sorted_list[2]+1 == sorted_list[3]:
+                self.sm_straight_score = 30
+            else:
+                self.sm_straight_score = 0
+        else:
+            self.sm_straight_score = 0
+        
+    

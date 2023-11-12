@@ -46,5 +46,3 @@ for i in turns:
     else:
         print("No Works")    
 
-test_list = [1,2,3,1,1]
-User.SM_straight_scoring(test_list)
