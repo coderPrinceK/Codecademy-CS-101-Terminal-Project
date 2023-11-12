@@ -144,3 +144,10 @@ class Player():
                 self.lg_straight_score = 0
         else:
             self.lg_straight_score = 0
+
+    
+    def chance_scoring(self, dice_list):
+        count = 0
+        for die in dice_list:
+            count += die
+        self.chance_score = count
