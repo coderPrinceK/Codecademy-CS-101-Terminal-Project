@@ -73,4 +73,19 @@ class Player():
         else:
             self.three_kind_score = 0
 
+    def four_kind_scoring(self, dice_list, number):
+        minimum_num = 4
+        count = 0
+        die_count = 0
+        for die in dice_list:
+            if die == number:
+                count += die
+                die_count += 1
+            else:
+                count +=die
+        
+        if die_count >= minimum_num:
+            self.four_kind_score = count
+        else:
+            self.four_kind_score = 0
    
