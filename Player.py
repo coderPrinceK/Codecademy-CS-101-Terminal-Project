@@ -57,6 +57,20 @@ class Player():
         else:
             self.sixs_score = count
 
-
+    def three_kind_scoring(self, dice_list, number):
+        minimum_num = 3
+        count = 0
+        die_count = 0
+        for die in dice_list:
+            if die == number:
+                count += die
+                die_count += 1
+            else:
+                count += die
+        
+        if die_count >= minimum_num:
+            self.three_kind_score = count
+        else:
+            self.three_kind_score = 0
 
    
