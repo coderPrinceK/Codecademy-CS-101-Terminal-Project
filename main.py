@@ -10,8 +10,7 @@ die_two = random.randint(1,6)
 die_three = random.randint(1,6)
 die_four = random.randint(1,6)
 die_five = random.randint(1,6)
-die_six = random.randint(1,6)
-dice = [die_one, die_two, die_three, die_four, die_five, die_six]
+dice = [die_one, die_two, die_three, die_four, die_five]
 
 
 def rerole_individual(die_number):
@@ -24,7 +23,6 @@ def rerole_all():
     dice[2] = random.randint(1,6)
     dice[3] = random.randint(1,6)
     dice[4] = random.randint(1,6)
-    dice[5] = random.randint(1,6)
 
 
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
@@ -47,3 +45,6 @@ for i in turns:
     
     else:
         print("No Works")    
+
+test_list = [1,2,3,1,1]
+User.SM_straight_scoring(test_list)

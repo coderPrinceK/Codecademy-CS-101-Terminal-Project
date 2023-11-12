@@ -102,3 +102,15 @@ class Player():
             self.full_house_score = 25
         else:
             self.full_house_score = 0
+
+
+    def SM_straight_scoring(self, dice_list):
+        dice_list.sort()
+        sorted_list =[]
+        for die in dice_list:
+            if die not in sorted_list:
+                sorted_list.append(die)
+        
+        #fix  index error
+        test =  sorted_list[0]+1 == sorted_list[1] and sorted_list[1]+1 == sorted_list[2] and sorted_list[2]+1 == sorted_list[3]
+        print(test)
