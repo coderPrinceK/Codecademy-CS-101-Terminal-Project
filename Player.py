@@ -36,3 +36,27 @@ class Player():
         print("Lg. Straight: {LS}".format(LS=self.lg_straight_score))
         print("Yahtzee: {Y}".format(Y=self.yahtzee_score))
         print("Chance: {CHANCE}".format(CHANCE=self.chance_score))
+
+
+#a function to use on all lower numbers
+    def number_scoreing(self,dice_list, number):
+        count = 0
+        for die in dice_list:
+            if die == number:
+                count += number
+        if number == 1:
+            self.ones_score = count
+        elif number == 2:
+            self.twos_score = count
+        elif number == 3:
+            self.threes_score = count
+        elif number == 4:
+            self.fours_score = count
+        elif number == 5:
+            self.fives_score = count
+        else:
+            self.sixs_score = count
+
+
+
+   

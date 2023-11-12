@@ -1,7 +1,7 @@
 import random
 from Player import Player
 #Test User
-User = Player("Conrad", 1,2,3,4,5,6,7,8,9,10,11,12,13)
+User = Player("Conrad", "None",2,3,4,5,6,7,8,9,10,11,12,13)
 
 
 #dice set up
@@ -28,7 +28,7 @@ def rerole_all():
 
 
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
-turns = [1]
+turns = []
 Y_N_choices = ["Yes", "No"]
 User.print_score_sheet()
 
