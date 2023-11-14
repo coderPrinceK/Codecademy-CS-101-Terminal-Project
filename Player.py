@@ -151,3 +151,11 @@ class Player():
         for die in dice_list:
             count += die
         self.chance_score = count
+
+
+    def yahtzee_scoring(self, dice_list):
+        y_number = dice_list[0]
+        if dice_list[0] == dice_list[1] and dice_list[0] == dice_list[2] and dice_list[0] == dice_list[3] and dice_list[0] == dice_list[4]:
+            self.yahtzee_score = 50
+        else:
+            self.yahtzee_score = 0
