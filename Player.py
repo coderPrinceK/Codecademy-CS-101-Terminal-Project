@@ -162,3 +162,18 @@ class Player():
             self.yahtzee_score = 50
         else:
             self.yahtzee_score = 0
+
+
+    def bonus_y_scoring(self, dice_list, turn_list):
+        if self.yahtzee_score > 0 and dice_list[0] == dice_list[1] and dice_list[0] == dice_list[2] and dice_list[0] == dice_list[3] and dice_list[0] == dice_list[4]:
+            print("Congrats you have rolled a bonus Yahtzee!")
+            self.double_y_list.append(1)
+            turn_list.append(1)
+
+
+    def bonus_y_check(self, dice_list):
+        if dice_list[0] == dice_list[1] and dice_list[0] == dice_list[2] and dice_list[0] == dice_list[3] and dice_list[0] == dice_list[4]:
+            return True
+        else:
+            return False
+    
