@@ -26,7 +26,7 @@ def rerole_all():
 
 
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
-turns = []
+turns = list(range(1,14))
 Y_N_choices = ["Yes", "No"]
 #User.print_score_sheet()
 
