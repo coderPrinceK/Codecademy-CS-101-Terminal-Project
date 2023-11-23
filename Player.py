@@ -1,5 +1,5 @@
 class Player():
-    def __init__(self, name, ones_score, twos_score, threes_score, fours_score, fives_score, sixs_score, three_kind_score, four_kind_score, full_house_score, sm_straight_score, lg_straight_score, yahtzee_score, chance_score):
+    def __init__(self, name, ones_score, twos_score, threes_score, fours_score, fives_score, sixs_score, three_kind_score, four_kind_score, full_house_score, sm_straight_score, lg_straight_score, yahtzee_score, chance_score, double_y_list):
         self.name = name
         #number scores
         self.ones_score = ones_score
@@ -17,6 +17,9 @@ class Player():
         self.lg_straight_score = lg_straight_score
         self.yahtzee_score = yahtzee_score
         self.chance_score = chance_score
+
+        #list to add bonus yahtzees
+        self.double_y_list = double_y_list
 
     
     def print_score_sheet(self):
