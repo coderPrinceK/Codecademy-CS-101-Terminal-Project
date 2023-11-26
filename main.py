@@ -39,6 +39,7 @@ def re_role_ask():
         elif answer == "No":
             print("This die will not be changed")
 
+Avalible_Options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a kind", "4 of a kind", "Full House", "Sm. Straight", "Lg. Straight", "Yahtzee", "Chance"]
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
 turns = []
 Y_N_choices = ["Yes", "No"]
@@ -60,6 +61,3 @@ for i in turns:
     else:
         print("No Works")    
 
-print(dice)
-re_role_ask()
-print(dice)
