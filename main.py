@@ -45,6 +45,14 @@ def scoring():
     while scoring_answer not in avalible_options:
         print(avalible_options)
         scoring_answer = input("That option does not exist or it has already been scored please choose from the options above.")
+    if scoring_answer == "Ones":
+        User.number_scoreing(dice, 1)
+        print("You have chosen Ones!")
+        print("Your Ones score will be: {SCORE}".format(SCORE=User.ones_score))
+
+
+
+
 
 avalible_options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a kind", "4 of a kind", "Full House", "Sm. Straight", "Lg. Straight", "Yahtzee", "Chance"]
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
@@ -68,4 +76,5 @@ for i in turns:
     else:
         print("No Works")    
 
+print(dice)
 scoring()
