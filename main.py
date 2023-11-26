@@ -13,8 +13,12 @@ die_five = random.randint(1,6)
 dice = [die_one, die_two, die_three, die_four, die_five]
 
 
+
+
 def rerole_individual(die_number):
     dice[die_number] = random.randint(1,6)
+
+
 
 
 def rerole_all():
@@ -23,6 +27,8 @@ def rerole_all():
     dice[2] = random.randint(1,6)
     dice[3] = random.randint(1,6)
     dice[4] = random.randint(1,6)
+
+
 
 def re_role_ask():
     die_num = -1
@@ -39,17 +45,39 @@ def re_role_ask():
         elif answer == "No":
             print("This die will not be changed")
 
+
+
 def scoring():
     print(avalible_options)
     scoring_answer = input("From the options above what would you like to score?")
     while scoring_answer not in avalible_options:
         print(avalible_options)
         scoring_answer = input("That option does not exist or it has already been scored please choose from the options above.")
+   #ones
     if scoring_answer == "Ones":
         User.number_scoreing(dice, 1)
         print("You have chosen Ones!")
         print("Your Ones score will be: {SCORE}".format(SCORE=User.ones_score))
-
+        avalible_options.remove("Ones")
+    #twos
+    elif scoring_answer == "Twos":
+        User.number_scoreing(dice, 2)
+        print("You have chose Twos!")
+        print("Your Twos score will be {SCORE}".format(SCORE=User.twos_score))
+        avalible_options.remove("Twos")
+    #threes
+    elif scoring_answer == "Threes":
+        User.number_scoreing(dice, 3)
+        print("You have chosen Threes!")
+        print("Your Threes score will be {SCORE}".format(SCORE=User.threes_score))
+        avalible_options.remove("Threes")
+    #fours
+    elif scoring_answer == "Fours":
+        User.number_scoreing(dice, 4)
+        print("You have chosen Fours!")
+        print("Your Fours score will be {SCORE}".format(SCORE=User.fours_score))
+        avalible_options.remove("Fours")
+    #fives
 
 
 
