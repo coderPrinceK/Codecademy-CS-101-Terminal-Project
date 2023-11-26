@@ -24,9 +24,23 @@ def rerole_all():
     dice[3] = random.randint(1,6)
     dice[4] = random.randint(1,6)
 
+def re_role_ask():
+    die_num = -1
+    die_num_string = 0
+    for die in dice:
+        die_num += 1
+        die_num_string +=1
+        answer = input("Would you like to rerole die {DIE}? Type Yes or No".format(DIE=die_num_string))
+        while answer not in Y_N_choices:
+            answer = input("That was not Yes or No please type one exactly!")
+        if answer == "Yes":
+            rerole_individual(die_num)
+            print("Ok the die will be reroled")
+        elif answer == "No":
+            print("This die will not be changed")
 
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
-turns = list(range(1,14))
+turns = []
 Y_N_choices = ["Yes", "No"]
 #User.print_score_sheet()
 
@@ -46,3 +60,6 @@ for i in turns:
     else:
         print("No Works")    
 
+print(dice)
+re_role_ask()
+print(dice)
