@@ -39,7 +39,14 @@ def re_role_ask():
         elif answer == "No":
             print("This die will not be changed")
 
-Avalible_Options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a kind", "4 of a kind", "Full House", "Sm. Straight", "Lg. Straight", "Yahtzee", "Chance"]
+def scoring():
+    print(avalible_options)
+    scoring_answer = input("From the options above what would you like to score?")
+    while scoring_answer not in avalible_options:
+        print(avalible_options)
+        scoring_answer = input("That option does not exist or it has already been scored please choose from the options above.")
+
+avalible_options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a kind", "4 of a kind", "Full House", "Sm. Straight", "Lg. Straight", "Yahtzee", "Chance"]
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
 turns = []
 Y_N_choices = ["Yes", "No"]
@@ -61,3 +68,4 @@ for i in turns:
     else:
         print("No Works")    
 
+scoring()
