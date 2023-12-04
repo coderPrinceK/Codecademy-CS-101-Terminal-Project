@@ -89,6 +89,16 @@ def scoring():
         print("You have chosen Sixes!")
         print("Your Sixes score will be {SCORE}".format(SCORE=User.sixs_score))
         avalible_options.remove("Sixes")
+    #3 of a kind
+    elif scoring_answer == "3 of a kind":
+        print("You have chosen 3 of a kind!")
+        three_kind_num = int(input("What number will be used for scoring? Type any number even if you will not recive full points."))
+        while three_kind_num not in num_choices:
+            three_kind_num = int(input("You must enter a number 1-6!"))
+        User.three_kind_scoring(dice,three_kind_num)
+        print("Your 3 of a kind score will be {SCORE}".format(SCORE=User.three_kind_score))
+        avalible_options.remove("3 of a kind")
+
 
 
 
@@ -98,6 +108,7 @@ avalible_options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a
 turns = []
 Y_N_choices = ["Yes", "No"]
 #User.print_score_sheet()
+num_choices = [1,2,3,4,5,6]
 
 print("Welcome to solo Yahtzee.")
 for i in turns:
@@ -117,3 +128,4 @@ for i in turns:
 
 print(dice)
 scoring()
+print(avalible_options)
