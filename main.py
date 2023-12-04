@@ -78,6 +78,16 @@ def scoring():
         print("Your Fours score will be {SCORE}".format(SCORE=User.fours_score))
         avalible_options.remove("Fours")
     #fives
+    elif scoring_answer == "Fives":
+        User.number_scoreing(dice, 5)
+        print("You have chosen Fives!")
+        print("Your Fives score will be {SCORE}".format(SCORE=User.fives_score))
+        avalible_options.remove("Fives")
+    #sixes
+    elif scoring_answer == "Sixes":
+        User.number_scoreing(dice, 6)
+        print("You have chosen Sixes!")
+        print("Your Sixes score will be {SCORE}".format(SCORE=User.sixs_score))
 
 
 
