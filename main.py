@@ -88,6 +88,7 @@ def scoring():
         User.number_scoreing(dice, 6)
         print("You have chosen Sixes!")
         print("Your Sixes score will be {SCORE}".format(SCORE=User.sixs_score))
+        avalible_options.remove("Sixes")
 
 
 
