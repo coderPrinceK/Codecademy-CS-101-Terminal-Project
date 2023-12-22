@@ -1,7 +1,7 @@
 import random
 from Player import Player
 #Test User
-User = Player("Conrad", "None",2,3,4,5,6,7,8,9,10,11,12,13,[])
+User = Player("Conrad", "None",2,3,4,5,6,7,8,9,10,11,0,13,[])
 
 
 #dice set up
@@ -126,6 +126,9 @@ for i in turns:
     else:
         print("No Works")    
 
-print(dice)
-scoring()
-print(avalible_options)
+
+
+
+test_dice = [1,1,1,1,1]
+test_turns = [1]
+print(User.yahtzee_score)
