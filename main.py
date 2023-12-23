@@ -27,23 +27,34 @@ def rerole_all():
     dice[2] = random.randint(1,6)
     dice[3] = random.randint(1,6)
     dice[4] = random.randint(1,6)
+    print(dice)
 
 
 
 def re_role_ask():
-    die_num = -1
-    die_num_string = 0
-    for die in dice:
-        die_num += 1
-        die_num_string +=1
-        answer = input("Would you like to rerole die {DIE}? Type Yes or No".format(DIE=die_num_string))
-        while answer not in Y_N_choices:
-            answer = input("That was not Yes or No please type one exactly!")
-        if answer == "Yes":
-            rerole_individual(die_num)
-            print("Ok the die will be reroled")
-        elif answer == "No":
-            print("This die will not be changed")
+    re_role_answer = input("would you like to rerole all the dice or just some individual dice? Yes or No")
+    while re_role_answer not in Y_N_choices:
+        re_role_answer = input("Please enter Yes or No!")
+    if re_role_answer == "Yes":
+        rerole_all()
+    else:
+
+        die_num = -1
+        die_num_string = 0
+        for die in dice:
+            die_num += 1
+            die_num_string +=1
+            answer = input("Would you like to rerole die {DIE}? Type Yes or No".format(DIE=die_num_string))
+            while answer not in Y_N_choices:
+                answer = input("That was not Yes or No please type one exactly!")
+            if answer == "Yes":
+                rerole_individual(die_num)
+                print("Ok the die will be reroled")
+            elif answer == "No":
+                print("This die will not be changed")
+    print(dice)
+
+    
 
 
 
@@ -148,7 +159,7 @@ def scoring():
 
 avalible_options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a kind", "4 of a kind", "Full House", "Sm. Straight", "Lg. Straight", "Yahtzee", "Chance"]
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
-turns = []
+turns = [1]
 Y_N_choices = ["Yes", "No"]
 #User.print_score_sheet()
 num_choices = [1,2,3,4,5,6]
