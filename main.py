@@ -109,7 +109,7 @@ def scoring():
         avalible_options.remove("4 of a kind")
     # Full House
     elif scoring_answer == "Full House":
-        print("You have chosen")
+        print("You have chosen Full House!")
         FH_three_num = int(input("What is the number you will select for your set of three?"))
         while FH_three_num not in num_choices:
             FH_three_num = int(input("Please select a number 1-6!"))
@@ -119,6 +119,12 @@ def scoring():
         User.full_house_scoring(dice,FH_three_num, FH_two_num)
         print("You Full House Score will be {SCORE}".format(SCORE=User.full_house_score))
         avalible_options.remove("Full House")
+    # Sm. Straight
+    elif scoring_answer == "Sm. Straight":
+        print("You have chosen Sm. Straight!")
+        User.SM_straight_scoring(dice)
+        print("You Sm. Straight score will be {SCORE}".format(SCORE=User.sm_straight_score))
+        avalible_options.remove("Sm. Straight")
 
 
 
@@ -147,6 +153,6 @@ for i in turns:
         print("No Works")    
 
 
-dice = [1,1,1,2,2]
+dice = [1,2,3,6,4]
 scoring()
 print()
