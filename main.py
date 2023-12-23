@@ -120,15 +120,10 @@ for i in turns:
         first_choice = input("please type Yes or No.")
     
     if first_choice == "Yes":
-        print("Yes Works")
-    
+        re_role_ask()
     
     else:
         print("No Works")    
 
 
 
-
-test_dice = [1,1,1,1,1]
-test_turns = [1]
-print(User.yahtzee_score)
