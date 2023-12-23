@@ -39,6 +39,15 @@ class Player():
         print("Lg. Straight: {LS}".format(LS=self.lg_straight_score))
         print("Yahtzee: {Y}".format(Y=self.yahtzee_score))
         print("Chance: {CHANCE}".format(CHANCE=self.chance_score))
+        total = 0
+        for i in self.double_y_list:
+            total += 100
+        print("Bonus Yahtzee(s): {BONUS}".format(BONUS=total))
+        print("------------------")
+        final_score = self.ones_score+self.twos_score+self.threes_score+self.fours_score+self.fives_score+self.sixs_score+self.three_kind_score+self.four_kind_score+self.full_house_score+self.sm_straight_score+self.lg_straight_score+self.yahtzee_score+total
+        print("FINAL SCORE: {SCORE}".format(SCORE=final_score))
+       
+            
 
 
 #a function to use on all lower numbers
