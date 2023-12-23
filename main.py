@@ -106,6 +106,19 @@ def scoring():
             four_kind_num = int(input("You must enter a number 1-6!"))
         User.four_kind_scoring(dice,four_kind_num)
         print("Your 4 of a kind score will be {SCORE}".format(SCORE=User.four_kind_score))
+        avalible_options.remove("4 of a kind")
+    # Full House
+    elif scoring_answer == "Full House":
+        print("You have chosen")
+        FH_three_num = int(input("What is the number you will select for your set of three?"))
+        while FH_three_num not in num_choices:
+            FH_three_num = int(input("Please select a number 1-6!"))
+        FH_two_num = int(input("Now what will be the number for you pair?"))
+        while FH_two_num not in num_choices:
+            FH_two_num = int(input("Please select a number from 1-6!"))
+        User.full_house_scoring(dice,FH_three_num, FH_two_num)
+        print("You Full House Score will be {SCORE}".format(SCORE=User.full_house_score))
+        avalible_options.remove("Full House")
 
 
 
@@ -134,6 +147,6 @@ for i in turns:
         print("No Works")    
 
 
-dice = [1,1,1,1,2]
+dice = [1,1,1,2,2]
 scoring()
 print()
