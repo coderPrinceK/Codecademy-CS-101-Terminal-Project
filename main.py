@@ -125,7 +125,12 @@ def scoring():
         User.SM_straight_scoring(dice)
         print("You Sm. Straight score will be {SCORE}".format(SCORE=User.sm_straight_score))
         avalible_options.remove("Sm. Straight")
-
+    # Lg. Straight
+    elif scoring_answer ==  "Lg. Straight":
+        print("You have chosen Lg. Straight!")
+        User.LG_straight_scoring(dice)
+        print("You Lg. Straight score will be {SCORE}".format(SCORE=User.lg_straight_score))
+        avalible_options.remove("Lg. Straight")
 
 
 
@@ -153,6 +158,6 @@ for i in turns:
         print("No Works")    
 
 
-dice = [1,2,3,6,4]
+dice = [1,2,3,5,4]
 scoring()
 print()
