@@ -172,7 +172,7 @@ class Player():
 
 
     def bonus_y_check(self, dice_list):
-        if dice_list[0] == dice_list[1] and dice_list[0] == dice_list[2] and dice_list[0] == dice_list[3] and dice_list[0] == dice_list[4]:
+        if dice_list[0] == dice_list[1] and dice_list[0] == dice_list[2] and dice_list[0] == dice_list[3] and dice_list[0] == dice_list[4] and self.yahtzee_score>0:
             return True
         else:
             return False
