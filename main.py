@@ -131,6 +131,12 @@ def scoring():
         User.LG_straight_scoring(dice)
         print("You Lg. Straight score will be {SCORE}".format(SCORE=User.lg_straight_score))
         avalible_options.remove("Lg. Straight")
+    #Yahtzee
+    elif scoring_answer == "Yahtzee":
+        print("You have chosen Yahtzee!")
+        User.yahtzee_scoring(dice)
+        print("Your Yahtzee score will be {SCORE}".format(SCORE=User.yahtzee_score))
+        avalible_options.remove("Yahtzee")
 
 
 
@@ -158,6 +164,6 @@ for i in turns:
         print("No Works")    
 
 
-dice = [1,2,3,5,4]
+dice = [6,1,1,1,1]
 scoring()
 print()
