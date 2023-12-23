@@ -1,7 +1,7 @@
 import random
 from Player import Player
 #Test User
-User = Player("Conrad", "None",2,3,4,5,6,7,8,9,10,11,0,13,[])
+User = Player("Conrad", "None",2,3,4,5,6,7,8,9,10,11,50,13,[])
 
 
 #dice set up
@@ -159,24 +159,49 @@ def scoring():
 
 avalible_options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a kind", "4 of a kind", "Full House", "Sm. Straight", "Lg. Straight", "Yahtzee", "Chance"]
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
-turns = [1,1]
+turns = [1]
 Y_N_choices = ["Yes", "No"]
 #User.print_score_sheet()
 num_choices = [1,2,3,4,5,6]
 
 print("Welcome to solo Yahtzee.")
 for i in turns:
+    #roll 1
     print(" ")
     print("Here are the dice on your first role")
     rerole_all()
+    #roll 2
     first_choice = input("Would you like a chance to roll again? Yes or No")
     while first_choice not in Y_N_choices:
         first_choice = input("please type Yes or No.")
     
     if first_choice == "Yes":
-        re_role_ask()
-    
+        re_role_ask
+        #roll 3
+        second_choice = input("Would you like to roll again a final time?")
+        while second_choice not in Y_N_choices:
+            second_choice = input("Please type Yes or No!")
+            if second_choice == "Yes":
+                pass
+            #Add logic for final rolling and scoring!
+            else:
+
+                BY_check = User.bonus_y_check(dice)
+                if BY_check == True:
+                    User.bonus_y_scoring(dice,turns)
+                    print(turns)
+                    continue
+                else:
+                    print("Not over")
+                    scoring()  
     else:
-        scoring()    
+        BY_check = User.bonus_y_check(dice)
+        if BY_check == True:
+            User.bonus_y_scoring(dice,turns)
+            print(turns)
+            continue
+        else:
+            print("Not over")
+            scoring()    
 
 
