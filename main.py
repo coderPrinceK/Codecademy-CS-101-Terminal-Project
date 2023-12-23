@@ -98,6 +98,14 @@ def scoring():
         User.three_kind_scoring(dice,three_kind_num)
         print("Your 3 of a kind score will be {SCORE}".format(SCORE=User.three_kind_score))
         avalible_options.remove("3 of a kind")
+    #4 of a kind 
+    elif scoring_answer == "4 of a kind":
+        print("You have chosen 4 of a kind!")
+        four_kind_num = int(input("What number will be used for scoring? Type any number even if you will not recive full points."))
+        while four_kind_num not in num_choices:
+            four_kind_num = int(input("You must enter a number 1-6!"))
+        User.four_kind_scoring(dice,four_kind_num)
+        print("Your 4 of a kind score will be {SCORE}".format(SCORE=User.four_kind_score))
 
 
 
@@ -126,4 +134,6 @@ for i in turns:
         print("No Works")    
 
 
-
+dice = [1,1,1,1,2]
+scoring()
+print()
