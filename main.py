@@ -137,6 +137,11 @@ def scoring():
         User.yahtzee_scoring(dice)
         print("Your Yahtzee score will be {SCORE}".format(SCORE=User.yahtzee_score))
         avalible_options.remove("Yahtzee")
+    #Chance
+    elif scoring_answer ==  "Chance":
+        print("You have chosen Chance!")
+        User. chance_scoring(dice)
+        print("Your Chance score will be {SCORE}".format(SCORE=User.chance_score))
 
 
 
