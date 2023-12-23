@@ -159,16 +159,16 @@ def scoring():
 
 avalible_options = ["Ones", "Twos", "Threes", "Fours", "Fives", "Sixes", "3 of a kind", "4 of a kind", "Full House", "Sm. Straight", "Lg. Straight", "Yahtzee", "Chance"]
 #turns = list(range(1,14)) for when the game is ready the other turns is for testing
-turns = [1]
+turns = [1,1]
 Y_N_choices = ["Yes", "No"]
 #User.print_score_sheet()
 num_choices = [1,2,3,4,5,6]
 
 print("Welcome to solo Yahtzee.")
 for i in turns:
+    print(" ")
     print("Here are the dice on your first role")
     rerole_all()
-    print(dice)
     first_choice = input("Would you like a chance to roll again? Yes or No")
     while first_choice not in Y_N_choices:
         first_choice = input("please type Yes or No.")
@@ -177,9 +177,6 @@ for i in turns:
         re_role_ask()
     
     else:
-        print("No Works")    
+        scoring()    
 
 
-dice = [6,1,1,1,1]
-scoring()
-print()
