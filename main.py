@@ -1,8 +1,8 @@
 import random
 from Player import Player
 #Test User
-#cange zeros to "Nome"
-User = Player("Conrad", 0,0,0,0,0,0,0,0,0,0,0,0,0,[])
+User_name = input("What is your name?")
+User = Player(User_name, 0,0,0,0,0,0,0,0,0,0,0,0,0,[])
 
 
 #dice set up
@@ -33,7 +33,7 @@ def rerole_all():
 
 
 def re_role_ask():
-    re_role_answer = input("would you like to rerole all the dice or just some individual dice? Yes or No")
+    re_role_answer = input("Would you like to reroll all the dice? Enter Yes or No to reroll dice individually.")
     while re_role_answer not in Y_N_choices:
         re_role_answer = input("Please enter Yes or No!")
     if re_role_answer == "Yes":
@@ -45,14 +45,14 @@ def re_role_ask():
         for die in dice:
             die_num += 1
             die_num_string +=1
-            answer = input("Would you like to rerole die {DIE}? Type Yes or No".format(DIE=die_num_string))
+            answer = input("Would you like to reroll die {DIE}? Type Yes or No".format(DIE=die_num_string))
             while answer not in Y_N_choices:
                 answer = input("That was not Yes or No please type one exactly!")
             if answer == "Yes":
                 rerole_individual(die_num)
-                print("Ok the die will be reroled")
+                print("Ok the die will be rerolled.")
             elif answer == "No":
-                print("This die will not be changed")
+                print("This die will not be changed.")
     print(dice)
 
     
@@ -188,6 +188,9 @@ for i in turns:
         second_choice = input("Would you like to roll again a final time?")
         while second_choice not in Y_N_choices:
             second_choice = input("Please type Yes or No!")
+        
+        
+        
         if second_choice == "Yes":
             re_role_ask()
             BY_check = User.bonus_y_check(dice)
@@ -196,7 +199,7 @@ for i in turns:
                 print(turns)
                 continue
             else:
-                print("Not over")
+                
                 scoring()
        
        
@@ -210,7 +213,7 @@ for i in turns:
                 print(turns)
                 continue
             else:
-                print("Not over")
+
                 scoring()  
     
     
@@ -226,7 +229,7 @@ for i in turns:
             print(turns)
             continue
         else:
-            print("Not over")
+            
             scoring()    
 
 
